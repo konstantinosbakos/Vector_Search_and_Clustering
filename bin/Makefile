@@ -43,10 +43,10 @@ cluster: main_cluster.o CLS.o LSH.o f.o g.o h.o cube.o image.o Lloyd.o cluster.o
 
 #***********************************************************************************************
 
-graph_search: SoG.o GNNS.o main_graph_search.o main_vars.o algorithm.o g.o h.o f.o LSH.o\
+graph_search: SoG.o GNNS.o main_graph_search.o graph_search_vars.o algorithm.o g.o h.o f.o LSH.o\
                                image.o hash_table.o brute_force.o UI_messages.o skip_node.o\
                                math_functions.o skip_list_public.o skip_list_private.o
-	$(CXX) $(CXXFLAGS) -o graph_search SoG.o GNNS.o main_graph_search.o main_vars.o algorithm.o\
+	$(CXX) $(CXXFLAGS) -o graph_search SoG.o GNNS.o main_graph_search.o graph_search_vars.o algorithm.o\
                                g.o h.o f.o LSH.o image.o hash_table.o brute_force.o\
                                UI_messages.o skip_node.o math_functions.o\
                                skip_list_public.o skip_list_private.o
@@ -93,8 +93,8 @@ else
 endif
 Lloyd.o: ../src/CLS/Lloyd/Lloyd.cpp
 		$(CXX) $(CXXFLAGS) -c ../src/CLS/Lloyd/Lloyd.cpp
-main_vars.o: ../src/main_vars/main_vars.cpp
-		$(CXX) $(CXXFLAGS) -c ../src/main_vars/main_vars.cpp
+graph_search_vars.o: ../src/graph_search_vars/graph_search_vars.cpp
+		$(CXX) $(CXXFLAGS) -c ../src/graph_search_vars/graph_search_vars.cpp
 algorithm.o: ../src/algorithm/algorithm.cpp
 		$(CXX) $(CXXFLAGS) -c ../src/algorithm/algorithm.cpp
 cluster.o: ../src/CLS/cluster/cluster.cpp
@@ -139,4 +139,4 @@ reverse_search.o: ../src/CLS/reverse_search/reverse_search.cpp
 #*********************************************************************************************
 
 clean:
-	rm -rf lsh cube cluster *o *txt
+	rm -rf lsh cube cluster graph_search *o *txt
