@@ -342,9 +342,9 @@ void CLS::incomplete_output(int IMG_S, double *silhouette_values){
 
 void CLS::silhouette_exec(image_array *input_images_org, std::string output_file){
     int     IMG_S             = input_images_org->get_img_s();
-    double *silhouette_values = silhouette(this,input_images_org); //Find the silhouette values.
+    double *silhouette_values = silhouette(this,input_images_org);                     //Find the silhouette values.
 
-    this->CLS_output(IMG_S,silhouette_values,output_file,input_images_org,"original");           //Output to the specified file.
+    this->CLS_output(IMG_S,silhouette_values,output_file,input_images_org,"original"); //Output to the specified file.
 
     delete [] silhouette_values;
     silhouette_values = NULL;  
@@ -352,9 +352,9 @@ void CLS::silhouette_exec(image_array *input_images_org, std::string output_file
 
 void CLS::silhouette_exec(image_array *input_images_lat, image_array *input_images_org, std::string output_file){
     int     IMG_S             = input_images_lat->get_img_s();
-    double *silhouette_values = silhouette(this,input_images_lat,input_images_org); //Find the silhouette values.
+    double *silhouette_values = silhouette(this,input_images_lat,input_images_org);    //Find the silhouette values.
 
-    this->CLS_output(IMG_S,silhouette_values,output_file,input_images_org,"latent");           //Output to the specified file.
+    this->CLS_output(IMG_S,silhouette_values,output_file,input_images_org,"latent");   //Output to the specified file.
 
     delete [] silhouette_values;
     silhouette_values = NULL;  

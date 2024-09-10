@@ -72,7 +72,7 @@ void skip_list::generate_levels(int level){                //Creates skip list l
     }
 }
 
-skip_node ***skip_list::find_entry_pos(int ID){                //Find the position in each list that the selected ID will be placed to. O(logn).
+skip_node ***skip_list::find_entry_pos(int ID){            //Find the position in each list that the selected ID will be placed to. O(logn).
     int      levels     = this->max_level;
     skip_node   *low_bound  = this->Sentinel;
     skip_node   *high_bound = this->max_element;

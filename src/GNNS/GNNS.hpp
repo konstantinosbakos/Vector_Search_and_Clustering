@@ -1,7 +1,7 @@
 #ifndef __GNNS__
 #define __GNNS__
 
-#include "../main_vars/main_vars.hpp"
+#include "../graph_search_vars/graph_search_vars.hpp"
 #include "../../src/LSH/LSH.hpp"
 
 #define GNNS_M 1                           //Method value.

@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "main_vars.hpp"
+#include "graph_search_vars.hpp"
 
 //~Private~//
 

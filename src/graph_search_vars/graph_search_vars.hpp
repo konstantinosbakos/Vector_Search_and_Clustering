@@ -1,5 +1,5 @@
-#ifndef __MVARS__
-#define __MVARS__
+#ifndef __GSVARS__
+#define __GSVARS__
 
 #include "../../src/image/image.hpp"
 

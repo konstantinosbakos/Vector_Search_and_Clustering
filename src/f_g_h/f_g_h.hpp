@@ -4,8 +4,6 @@
 #include "../cube/skip_list/skip_list.hpp"
 #include "../image/image.hpp"
 
-#define W_VALUE 40 //?
-
 class H{
     private:
         int    d; //size of vectors.

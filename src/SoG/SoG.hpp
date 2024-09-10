@@ -1,7 +1,7 @@
 #ifndef __SOG__
 #define __SOG__
 
-#include "../main_vars/main_vars.hpp"
+#include "../graph_search_vars/graph_search_vars.hpp"
 #include "../../src/LSH/LSH.hpp"
 
 #define SoG_M 2                    //Method value.
