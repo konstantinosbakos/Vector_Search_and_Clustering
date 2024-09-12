@@ -5,8 +5,6 @@
 #include "silhouette.hpp"
 #include "../../math_functions/math_functions.hpp"
 
-//https://thescipub.com/pdf/jcssp.2008.252.255.pdf
-
 int get_b_cluster(int K, int IMG_S, image *point, cluster_array *clusters){
     int    a_cluster = -1;
     int    b_cluster = -1;
