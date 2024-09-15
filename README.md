@@ -2,7 +2,7 @@
 
 ## Summary
 
-This is a collection of algorithms that aim to cluster and search vectors of large dimentions, either in their original dimention (which is less time efficient since they will sparsely populate the space $R^{n}$, where $n$ is the dimention of the vectors, or in a latent dimension of choice.
+This is a collection of algorithms that aim to cluster and search vectors of large dimentions, either in their original dimention (which is less time efficient since they will sparsely populate the space $ℝ^{n}$, where $n$ is the dimention of the vectors, or in a latent dimension of choice.
 If the vectors are projected to the latent dimension, the algorithms are ran in the former dimension and then the distances between the vectors are calculated in the original dimension.
 The objective is to cluster the **input** vectors in such a way that any **query** vector will be matched with the (approximately) closest vector in the clustering, while being time efficient as well. 
 The time and the results (distance of the selected closest neighbour of the query vector) of the algorithms are compared to the brute force method that essentially acts as a point of reference.
@@ -15,9 +15,9 @@ There are four algorithms used and compared.
 
 Locality sensitive hashing (LSH) is an algorithm that hashes similare items into the same `hash buckets` with high probability. 
 
-The hash function used is $g(p) = \sum^k_{i=1} r_ih_i(p) mod M\in[0,...,M)$, for some large and random $M\in\R$ and random $r_i\in\R$.  
+The hash function used is $g(p) = \sum^k_{i=1} r_ih_i(p) mod M\in[0,...,M)$, for some large and random $M\inℝ$ and random $r_i\inℝ$.  
 $h_i(p)\in H$, where $H$ is a hash-function family, defined as;
-$h(p) = \frac{p*v + t}{w}$, where $p$ is the vector being hashed, $v\in N(0,1)^n$ and $t \in U(0,w)$, where $w \in N^*$.
+$h(p) = \frac{p\*v + t}{w}$, where $p$ is the vector being hashed, $v\in N(0,1)^n$ and $t \in U(0,w)$, where $w \in N^*$.
 
 |Hyperparameters |                   Function                   |
 |----------------|----------------------------------------------|
@@ -71,7 +71,7 @@ This is repeated untill none of the centroids change after an update.
 
 #### Silhouette Evaluation
 
-For the clusterings created by any algorithm, the silhouette method is used in order to evalute it. The implementation is heavily inspired by [this paper](https://thescipub.com/pdf/jcssp.2008.252.255.pdf).
+For the clusterings created by any algorithm, the silhouette method is used in order to evalute them. The implementation is heavily inspired by [this paper](https://thescipub.com/pdf/jcssp.2008.252.255.pdf).
 
 #### Hyperparameters
 
@@ -125,6 +125,7 @@ Hyperparameters
 
 The algorithms GNNS and SoG are executing the clustering procedures in a latent dimension of the data for better execution times. In the folder `/input/latent_dim_datasets/` you may find files of 10000, 1000 and 50 images in 30 dimensions (the original dimension of the MNIST dataset is $28*28=784$). The files that contain the same images in the original dimension can be found in the folder `/input/images`.
 In order to reduce a file from its original dimension to a latent one, the python encoder may be used.
+
 To run the executable please type `python reduce.py -d <dataset> -q <queryset>    -od <output_dataset_file> -oq <output_query_file>`.
 The program runs on GPU and supports hypertuning to find the best parameter combination for the dimensionality reduction. As it was requested for the project, the hypertuning is manual as of now.
 There is also the most optimal combination of parameters found for the MNIST dataset.
