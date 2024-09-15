@@ -77,14 +77,19 @@ For the clusterings created by any algorithm, the silhouette method is used in o
 
 For this executable the user must provide a file in this exact format, in order to initialise the hyperparameters of the program:
 
-`
-number_of_clusters: <int>              // K of K-means, default: 10
-number_of_vector_hash_tables: <int>    // default: 30
-number_of_vector_hash_functions: <int> // k of LSH for vectors, default: 5
-max_number_M_hypercube: <int>          // M of Hypercube, default: 4700
-number_of_hypercube_dimensions: <int>  // k of Hypercube, default: 8
-number_of_probes: <int>                // probes of Hypercube, default: 90
-`
+
+`number_of_clusters: <int>              // K of K-means, default: 10`
+
+`number_of_vector_hash_tables: <int>    // default: 30`
+
+`number_of_vector_hash_functions: <int> // k of LSH for vectors, default: 5`
+
+`max_number_M_hypercube: <int>          // M of Hypercube, default: 4700`
+
+`number_of_hypercube_dimensions: <int>  // k of Hypercube, default: 8`
+
+`number_of_probes: <int>                // probes of Hypercube, default: 90`
+
 
 The user should replace the `<int>` positions with the number they want to provide. If no number is provided the default values will be used.
 An example file is provided at `/input/conf/cluster.conf`.
