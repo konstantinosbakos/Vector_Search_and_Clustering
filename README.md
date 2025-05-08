@@ -2,7 +2,7 @@
 
 ## Summary
 
-This is a collection of algorithms that aim to cluster and search vectors of large dimentions, either in their original dimention (which is less time efficient since they will sparsely populate the space $ℝ^{n}$, where $n$ is the dimention of the vectors, or in a latent dimension of choice.
+This is a collection of algorithms that aim to cluster and search vectors of large dimentions, either in their original dimention (which is less time efficient since they will sparsely populate the space $ℝ^{n}$, where $n$ is the dimention of the vectors), or in a latent dimension of choice.
 If the vectors are projected to the latent dimension, the algorithms are ran in the former dimension and then the distances between the vectors are calculated in the original dimension.
 The objective is to cluster the **input** vectors in such a way that any **query** vector will be matched with the (approximately) closest vector in the clustering, while being time efficient as well. 
 The time and the results (distance of the selected closest neighbour of the query vector) of the algorithms are compared to the brute force method that essentially acts as a point of reference.
