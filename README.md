@@ -137,8 +137,8 @@ Regarding the clustering executable, that too uses latent and original dimension
 To run the program navigate to the `/bin` folder and type one of the following:
 
 - `make all`
-- `make lsh` (for Hypercube)
-- `make cube`
+- `make lsh`
+- `make cube` (for Hypercube)
 - `make graph_search` (for the GNNS and SoG algorithms)
 
 ## Running the executables
